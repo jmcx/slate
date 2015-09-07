@@ -1,0 +1,1263 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="javascripts/all.js" type="text/javascript"></script>
+
+      <script>
+        $(function() {
+          setupLanguages(["shell","ruby","python"]);
+        });
+      </script>
+  </head>
+
+  <body class="index">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <img src="images/logo.png" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="ruby">ruby</a>
+              <a href="#" data-language-name="python">python</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc">
+      </div>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        
+          <h1 id="welldocumentedapi">WellDocumentedAPI</h1>
+
+<h2 id="overview">Overview</h2>
+
+<h3 id="version-information">Version information</h3>
+
+<p>Version: 1.1.0</p>
+
+<h3 id="contact-information">Contact information</h3>
+
+<p>Contact: Jonathan Michaux
+Contact Email: jmichaux@restlet.com</p>
+
+<h3 id="uri-scheme">URI scheme</h3>
+
+<p>Host: welldocumentedapi.apihive.com
+BasePath: /v1
+Schemes: HTTPS</p>
+
+<h3 id="tags">Tags</h3>
+
+<ul>
+<li>WellDocumentatedAPI_Files: Imported from WellDocumentatedAPI_Files</li>
+<li>WellDocumentedAPI_Data: Imported from WellDocumentedAPI_Data</li>
+<li>Default: Default section</li>
+</ul>
+
+          <h2 id="paths">Paths</h2>
+
+<h3 id="loads-a-list-of-company">Loads a list of Company</h3>
+<pre class="highlight plaintext"><code>GET /companies/
+</code></pre>
+
+<h4 id="description">Description</h4>
+
+<p>Loads a list of Company</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>QueryParameter</td>
+<td>tags</td>
+<td>Allows to filter the collections of result by the value of field tags</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>QueryParameter</td>
+<td>name</td>
+<td>Allows to filter the collections of result by the value of field name</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>QueryParameter</td>
+<td>$size</td>
+<td>Size of the page to retrieve. Integer value</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>QueryParameter</td>
+<td>$page</td>
+<td>Number of the page to retrieve. Integer value.</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>QueryParameter</td>
+<td>$sort</td>
+<td>Order in which to retrieve the results. Multiple sort criteria can be passed. Example: sort=age ASC,height DESC</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>QueryParameter</td>
+<td>id</td>
+<td>Allows to filter the collections of result by the value of field id</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h4 id="responses">Responses</h4>
+
+<table><thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td>Company array</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Error 400</td>
+<td>No Content</td>
+</tr>
+</tbody></table>
+
+<h4 id="produces">Produces</h4>
+
+<ul>
+<li>application/json</li>
+<li>application/x-yaml</li>
+<li>application/xml</li>
+<li>text/xml</li>
+</ul>
+
+<h4 id="tags">Tags</h4>
+
+<ul>
+<li>WellDocumentedAPI_Data</li>
+</ul>
+
+<h3 id="adds-a-company">Adds a Company</h3>
+<pre class="highlight plaintext"><code>POST /companies/
+</code></pre>
+
+<h4 id="description">Description</h4>
+
+<p>Adds a Company</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>BodyParameter</td>
+<td>body</td>
+<td></td>
+<td>false</td>
+<td>Company</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h4 id="responses">Responses</h4>
+
+<table><thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td>Company</td>
+</tr>
+</tbody></table>
+
+<h4 id="consumes">Consumes</h4>
+
+<ul>
+<li>application/json</li>
+<li>application/x-yaml</li>
+<li>application/xml</li>
+<li>text/xml</li>
+</ul>
+
+<h4 id="produces">Produces</h4>
+
+<ul>
+<li>application/json</li>
+<li>application/x-yaml</li>
+<li>application/xml</li>
+<li>text/xml</li>
+</ul>
+
+<h4 id="tags">Tags</h4>
+
+<ul>
+<li>WellDocumentedAPI_Data</li>
+</ul>
+
+<h3 id="loads-a-company">Loads a Company</h3>
+<pre class="highlight plaintext"><code>GET /companies/{companyid}
+</code></pre>
+
+<h4 id="description">Description</h4>
+
+<p>Loads a Company</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PathParameter</td>
+<td>companyid</td>
+<td>Identifier of the Company</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h4 id="responses">Responses</h4>
+
+<table><thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td>Company</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Error 400</td>
+<td>No Content</td>
+</tr>
+</tbody></table>
+
+<h4 id="produces">Produces</h4>
+
+<ul>
+<li>application/json</li>
+<li>application/x-yaml</li>
+<li>application/xml</li>
+<li>text/xml</li>
+</ul>
+
+<h4 id="tags">Tags</h4>
+
+<ul>
+<li>WellDocumentedAPI_Data</li>
+</ul>
+
+<h3 id="stores-a-company">Stores a Company</h3>
+<pre class="highlight plaintext"><code>PUT /companies/{companyid}
+</code></pre>
+
+<h4 id="description">Description</h4>
+
+<p>Stores a Company</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PathParameter</td>
+<td>companyid</td>
+<td>Identifier of the Company</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>BodyParameter</td>
+<td>body</td>
+<td></td>
+<td>false</td>
+<td>Company</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h4 id="responses">Responses</h4>
+
+<table><thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td>Company</td>
+</tr>
+</tbody></table>
+
+<h4 id="consumes">Consumes</h4>
+
+<ul>
+<li>application/json</li>
+<li>application/x-yaml</li>
+<li>application/xml</li>
+<li>text/xml</li>
+</ul>
+
+<h4 id="produces">Produces</h4>
+
+<ul>
+<li>application/json</li>
+<li>application/x-yaml</li>
+<li>application/xml</li>
+<li>text/xml</li>
+</ul>
+
+<h4 id="tags">Tags</h4>
+
+<ul>
+<li>WellDocumentedAPI_Data</li>
+</ul>
+
+<h3 id="deletes-a-company">Deletes a Company</h3>
+<pre class="highlight plaintext"><code>DELETE /companies/{companyid}
+</code></pre>
+
+<h4 id="description">Description</h4>
+
+<p>Deletes a Company</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PathParameter</td>
+<td>companyid</td>
+<td>Identifier of the Company</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h4 id="responses">Responses</h4>
+
+<table><thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td>No Content</td>
+</tr>
+</tbody></table>
+
+<h4 id="tags">Tags</h4>
+
+<ul>
+<li>WellDocumentedAPI_Data</li>
+</ul>
+
+<h3 id="loads-a-list-of-contact">Loads a list of Contact</h3>
+<pre class="highlight plaintext"><code>GET /contacts/
+</code></pre>
+
+<h4 id="description">Description</h4>
+
+<p>Loads a list of Contact</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>QueryParameter</td>
+<td>birthday</td>
+<td>Allows to filter the collections of result by the value of field birthday</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>QueryParameter</td>
+<td>active</td>
+<td>Allows to filter the collections of result by the value of field active</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>QueryParameter</td>
+<td>lastName</td>
+<td>Allows to filter the collections of result by the value of field lastName</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>QueryParameter</td>
+<td>rank</td>
+<td>Allows to filter the collections of result by the value of field rank</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>QueryParameter</td>
+<td>company</td>
+<td>Allows to filter the collections of result by the value of field company</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>QueryParameter</td>
+<td>firstName</td>
+<td>Allows to filter the collections of result by the value of field firstName</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>QueryParameter</td>
+<td>$page</td>
+<td>Number of the page to retrieve. Integer value.</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>QueryParameter</td>
+<td>$sort</td>
+<td>Order in which to retrieve the results. Multiple sort criteria can be passed. Example: sort=age ASC,height DESC</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>QueryParameter</td>
+<td>id</td>
+<td>Allows to filter the collections of result by the value of field id</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>QueryParameter</td>
+<td>$size</td>
+<td>Size of the page to retrieve. Integer value</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h4 id="responses">Responses</h4>
+
+<table><thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td>Contact array</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Error 400</td>
+<td>No Content</td>
+</tr>
+</tbody></table>
+
+<h4 id="produces">Produces</h4>
+
+<ul>
+<li>application/json</li>
+<li>application/x-yaml</li>
+<li>application/xml</li>
+<li>text/xml</li>
+</ul>
+
+<h4 id="tags">Tags</h4>
+
+<ul>
+<li>WellDocumentedAPI_Data</li>
+</ul>
+
+<h3 id="adds-a-contact">Adds a Contact</h3>
+<pre class="highlight plaintext"><code>POST /contacts/
+</code></pre>
+
+<h4 id="description">Description</h4>
+
+<p>Adds a Contact</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>BodyParameter</td>
+<td>body</td>
+<td></td>
+<td>false</td>
+<td>Contact</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h4 id="responses">Responses</h4>
+
+<table><thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td>Contact</td>
+</tr>
+</tbody></table>
+
+<h4 id="consumes">Consumes</h4>
+
+<ul>
+<li>application/json</li>
+<li>application/x-yaml</li>
+<li>application/xml</li>
+<li>text/xml</li>
+</ul>
+
+<h4 id="produces">Produces</h4>
+
+<ul>
+<li>application/json</li>
+<li>application/x-yaml</li>
+<li>application/xml</li>
+<li>text/xml</li>
+</ul>
+
+<h4 id="tags">Tags</h4>
+
+<ul>
+<li>WellDocumentedAPI_Data</li>
+</ul>
+
+<h3 id="loads-a-contact">Loads a Contact</h3>
+<pre class="highlight plaintext"><code>GET /contacts/{contactid}
+</code></pre>
+
+<h4 id="description">Description</h4>
+
+<p>Loads a Contact</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PathParameter</td>
+<td>contactid</td>
+<td>Identifier of the Contact</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h4 id="responses">Responses</h4>
+
+<table><thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td>Contact</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Error 400</td>
+<td>No Content</td>
+</tr>
+</tbody></table>
+
+<h4 id="produces">Produces</h4>
+
+<ul>
+<li>application/json</li>
+<li>application/x-yaml</li>
+<li>application/xml</li>
+<li>text/xml</li>
+</ul>
+
+<h4 id="tags">Tags</h4>
+
+<ul>
+<li>WellDocumentedAPI_Data</li>
+</ul>
+
+<h3 id="stores-a-contact">Stores a Contact</h3>
+<pre class="highlight plaintext"><code>PUT /contacts/{contactid}
+</code></pre>
+
+<h4 id="description">Description</h4>
+
+<p>Stores a Contact</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PathParameter</td>
+<td>contactid</td>
+<td>Identifier of the Contact</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>BodyParameter</td>
+<td>body</td>
+<td></td>
+<td>false</td>
+<td>Contact</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h4 id="responses">Responses</h4>
+
+<table><thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td>Contact</td>
+</tr>
+</tbody></table>
+
+<h4 id="consumes">Consumes</h4>
+
+<ul>
+<li>application/json</li>
+<li>application/x-yaml</li>
+<li>application/xml</li>
+<li>text/xml</li>
+</ul>
+
+<h4 id="produces">Produces</h4>
+
+<ul>
+<li>application/json</li>
+<li>application/x-yaml</li>
+<li>application/xml</li>
+<li>text/xml</li>
+</ul>
+
+<h4 id="tags">Tags</h4>
+
+<ul>
+<li>WellDocumentedAPI_Data</li>
+</ul>
+
+<h3 id="deletes-a-contact">Deletes a Contact</h3>
+<pre class="highlight plaintext"><code>DELETE /contacts/{contactid}
+</code></pre>
+
+<h4 id="description">Description</h4>
+
+<p>Deletes a Contact</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PathParameter</td>
+<td>contactid</td>
+<td>Identifier of the Contact</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h4 id="responses">Responses</h4>
+
+<table><thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td>No Content</td>
+</tr>
+</tbody></table>
+
+<h4 id="tags">Tags</h4>
+
+<ul>
+<li>WellDocumentedAPI_Data</li>
+</ul>
+
+<h3 id="loads-the-list-of-files-for-the-folder-html">Loads the list of files for the folder html</h3>
+<pre class="highlight plaintext"><code>GET /html/
+</code></pre>
+
+<h4 id="description">Description</h4>
+
+<p>Loads the list of files for the folder html</p>
+
+<h4 id="responses">Responses</h4>
+
+<table><thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td>FolderListRepresentation</td>
+</tr>
+</tbody></table>
+
+<h4 id="produces">Produces</h4>
+
+<ul>
+<li>application/json</li>
+<li>application/x-yaml</li>
+<li>application/xml</li>
+<li>text/xml</li>
+</ul>
+
+<h4 id="tags">Tags</h4>
+
+<ul>
+<li>WellDocumentatedAPI_Files</li>
+</ul>
+
+<h3 id="the-files-you-load-through-this-method-will-describe-the-method-itself-what-came-first-the-chicken-or-the-egg">The files you load through this method will describe the method itself. What came first, the chicken or the egg?</h3>
+<pre class="highlight plaintext"><code>GET /html/{file}
+</code></pre>
+
+<h4 id="description">Description</h4>
+
+<p>The files you load through this method will describe the method itself. What came first, the chicken or the egg?</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PathParameter</td>
+<td>file</td>
+<td>File name</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h4 id="responses">Responses</h4>
+
+<table><thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td>htmlFileRepresentation</td>
+</tr>
+</tbody></table>
+
+<h4 id="tags">Tags</h4>
+
+<ul>
+<li>WellDocumentatedAPI_Files</li>
+</ul>
+
+<h3 id="stores-a-htmlfilerepresentation">Stores a htmlFileRepresentation</h3>
+<pre class="highlight plaintext"><code>PUT /html/{file}
+</code></pre>
+
+<h4 id="description">Description</h4>
+
+<p>Stores a htmlFileRepresentation</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PathParameter</td>
+<td>file</td>
+<td>File name</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>BodyParameter</td>
+<td>body</td>
+<td></td>
+<td>false</td>
+<td>htmlFileRepresentation</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h4 id="responses">Responses</h4>
+
+<table><thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td>htmlFileRepresentation</td>
+</tr>
+</tbody></table>
+
+<h4 id="tags">Tags</h4>
+
+<ul>
+<li>WellDocumentatedAPI_Files</li>
+</ul>
+
+<h3 id="deletes-a-htmlfilerepresentation">Deletes a htmlFileRepresentation</h3>
+<pre class="highlight plaintext"><code>DELETE /html/{file}
+</code></pre>
+
+<h4 id="description">Description</h4>
+
+<p>Deletes a htmlFileRepresentation</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PathParameter</td>
+<td>file</td>
+<td>File name</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h4 id="responses">Responses</h4>
+
+<table><thead>
+<tr>
+<th>HTTP Code</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+<td>No Content</td>
+</tr>
+</tbody></table>
+
+<h4 id="tags">Tags</h4>
+
+<ul>
+<li>WellDocumentatedAPI_Files</li>
+</ul>
+
+          <h2 id="definitions">Definitions</h2>
+
+<h3 id="folderrepresentation">FolderRepresentation</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td></td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>directory</td>
+<td></td>
+<td>false</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>mediaType</td>
+<td></td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h3 id="htmlfilerepresentation">htmlFileRepresentation</h3>
+
+<h3 id="contact">Contact</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Auto-generated primary key field</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>firstName</td>
+<td></td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>lastName</td>
+<td></td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>birthday</td>
+<td></td>
+<td>false</td>
+<td>string (date)</td>
+<td></td>
+</tr>
+<tr>
+<td>active</td>
+<td></td>
+<td>false</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>rank</td>
+<td></td>
+<td>false</td>
+<td>integer (int32)</td>
+<td></td>
+</tr>
+<tr>
+<td>company</td>
+<td>This property is a reference to a Company</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h3 id="companyaddress">CompanyAddress</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>street</td>
+<td></td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>zipcode</td>
+<td></td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>city</td>
+<td></td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h3 id="company">Company</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Auto-generated primary key field</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td></td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>tags</td>
+<td></td>
+<td>false</td>
+<td>string array</td>
+<td></td>
+</tr>
+<tr>
+<td>address</td>
+<td></td>
+<td>true</td>
+<td>CompanyAddress</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h3 id="folderlistrepresentation">FolderListRepresentation</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Schema</th>
+<th>Default</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>list</td>
+<td></td>
+<td>false</td>
+<td>FolderRepresentation array</td>
+<td></td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="ruby">ruby</a>
+                <a href="#" data-language-name="python">python</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
